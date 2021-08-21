@@ -37,23 +37,23 @@
                         <!-- Memory options -->
                         <div class="p-2">
                             <h3>Memory</h3>
-                            <button>8Gb unified memory</button>
-                            <button>16GB unified memory</button>
+                            <button id="ram-price-8gb">8Gb unified memory</button>
+                            <button id="ram-price-16gb">16GB unified memory</button>
 
                         </div>
                         <!-- Storages Options -->
                         <div class="p-2">
                             <h3>Storage</h3>
-                            <button>256GB SSD storage</button>
-                            <button>512GB SSD storage</button>
-                            <button>1TB SSD storage</button>
+                            <button id="ssd-price-256gb">256GB SSD storage</button>
+                            <button id="ssd-price-512gb">512GB SSD storage</button>
+                            <button id="ssd-price-1024gb">1TB SSD storage</button>
 
                         </div>
                         <!-- Delivery Options -->
                         <div class="p-2">
                             <h3>Choose your delivery option</h3>
-                            <button>16gb unified memory</button>
-                            <button>16gb unified memory</button>
+                            <button id="delivery-15days">Within 15 working days</button>
+                            <button id="delivery-3days">Within 3 working days</button>
                         </div>
                     </div>
                     <!-- Price Calculation Table -->
@@ -66,21 +66,21 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">Extra Memory Cost</td>
-                                    <td>$0</td>
+                                    <td>$<span id="ram-cost">0</span></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">Extra Storage Cost</td>
-                                    <td>$0</td>
+                                    <td>$<span id="ssd-cost">0</span></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">Delivery charge</td>
-                                    <td>$0</td>
+                                    <td>$<span id="delivery-cost">0</span></td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <td colspan="2">Total Price</td>
-                                    <td>$0</td>
+                                    <td>$<span id="total-price">1299</span></td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -88,8 +88,9 @@
                     <!-- promo option -->
                     <div>
                         <h2>Add Pomo Code</h2>
-                        <input type="text" placeholder="Enter pomo code 'stevekaku' to get 20% discount'" size="45">
-                        <button type="button" class="btn btn-danger">Apply</button>
+                        <input id="pomo-code" type="text" placeholder="Enter pomo code 'stevekaku' to get 20% discount."
+                            size="45">
+                        <button id="pomo-apply" type="button" class="btn btn-danger">Apply</button>
                     </div>
                 </div>
             </div>
@@ -98,7 +99,7 @@
     <hr>
     <footer>
         <!-- Total Price After Discount -->
-        <h2>Total: $1299</h2>
+        <h2>Total: $<span id="grand-total">1299</span></h2>
     </footer>
 
     <!-- bootstrap javascript cdn  -->

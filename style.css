@@ -5,5 +5,5 @@ header,footer{
     text-align: center;
 }
 button:hover {
-    background-color: yellow;
+    background-color: rgb(255, 255, 0);
 }
