@@ -14,11 +14,9 @@ function getDiscountPrice() {
     if (pomoCheck === 'stevekaku') {
         const discount = total * 20 / 100;
         total -= discount;
-        console.log(total);
         document.getElementById('grand-total').innerText = total;
     }
 }
-
 document.getElementById('ram-price-8gb').addEventListener('click', function () {
     document.getElementById('ram-cost').innerText = 0;
     setTotalPrice();
