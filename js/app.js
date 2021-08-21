@@ -1,10 +1,10 @@
 
 function setTotalPrice() {
-    let d = parseInt(1299);
-    let a = parseInt(document.getElementById('ram-cost').innerText);
-    let b = parseInt(document.getElementById('ssd-cost').innerText);
-    let c = parseInt(document.getElementById('delivery-cost').innerText);
-    let sum = d + a + b + c;  //total sum before pomo code
+    let basePrice = parseInt(1299);
+    let ramPrice = parseInt(document.getElementById('ram-cost').innerText);
+    let ssdPrice = parseInt(document.getElementById('ssd-cost').innerText);
+    let deliveryCost = parseInt(document.getElementById('delivery-cost').innerText);
+    let sum = d + ramPrice + ssdPrice + deliveryCost;  //total sum before pomo code
     document.getElementById('total-price').innerText = sum;
     document.getElementById('grand-total').innerText = sum;
 }
@@ -15,8 +15,7 @@ function getEvent(productId, price) {
 function getDiscountPrice() {
     let total = document.getElementById('total-price').innerText;
     const pomoCheck = document.getElementById('pomo-code').value;
-    pomoLower = pomoCheck.toLowerCase(); // all input will be lower Case
-    if (pomoLower === 'stevekaku') {
+    if (pomoCheck.toLowerCase() === 'stevekaku') {
         const discount = total * 20 / 100;
         total -= discount;
         document.getElementById('grand-total').innerText = total; // total after pomo
