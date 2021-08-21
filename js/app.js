@@ -4,7 +4,7 @@ function setTotalPrice() {
     let ramPrice = parseInt(document.getElementById('ram-cost').innerText);
     let ssdPrice = parseInt(document.getElementById('ssd-cost').innerText);
     let deliveryCost = parseInt(document.getElementById('delivery-cost').innerText);
-    let sum = d + ramPrice + ssdPrice + deliveryCost;  //total sum before pomo code
+    let sum = basePrice + ramPrice + ssdPrice + deliveryCost;  //total sum before pomo code
     document.getElementById('total-price').innerText = sum;
     document.getElementById('grand-total').innerText = sum;
 }
